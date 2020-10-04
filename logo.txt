@@ -1,0 +1,33 @@
+import turtle               # allows us to use the turtles library
+wn = turtle.Screen()        # creates a graphics window
+alex = turtle.Turtle()      # create a turtle named alex
+
+def sokszog(hossz, szogszam, szin):
+    for i in range (szogszam):
+        alex.color(szin)
+        alex.forward(hossz)
+        alex.left(360/szogszam)
+
+def logo():
+    sokszog(50, 4, "blue")
+    sokszog(50, 5, "red")
+    alex.color("blue")
+    alex.forward(50)
+    sokszog(50, 5, "red")
+    alex.left(90)
+    alex.color("blue")
+    alex.forward(50)
+    sokszog(50, 5, "red")
+    alex.color("blue")
+    alex.left(90)
+    alex.forward(50)
+    alex.left(90)
+    alex.forward(50)
+    sokszog(50, 5, "red")
+    alex.left(180)
+    alex.color("blue")
+    alex.forward(50)
+    alex.left(90)
+    sokszog(50, 5, "red")
+
+logo()
